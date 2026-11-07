@@ -7,7 +7,7 @@ version = "0.1.0"
 edition = "2024"
 license = "MIT"
 rust-version = "1.95"
-repository = "https://github.com/OpenFAT/GmIdW"
+repository = "https://github.com/Scouren/GmIdW"
 publish = false
 
 [lib]
@@ -18,13 +18,13 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 # Pinned to a Schemify commit; the nightly workflow tests against Schemify `main` instead.
-schemify-abi = { git = "https://github.com/OpenFAT/Schemify-Plugins", rev = "39da966d2ae77d7dbb0325d32c0b80d136f0262e", features = ["guest"] }
+schemify-abi = { git = "https://github.com/Scouren/Schemify-Plugins", rev = "39da966d2ae77d7dbb0325d32c0b80d136f0262e", features = ["guest"] }
 
 [dev-dependencies]
 # Drives the built guest in `tests/guest.rs` (event chain, fuel, `schemify_call`); same engine
 # configuration as the host (Schemify's `crates/plugin`).
 # The real host (`tests/host.rs`): what the editor loads the package with.
-schemify-plugin = { git = "https://github.com/OpenFAT/Schemify-Plugins", rev = "39da966d2ae77d7dbb0325d32c0b80d136f0262e" }
+schemify-plugin = { git = "https://github.com/Scouren/Schemify-Plugins", rev = "39da966d2ae77d7dbb0325d32c0b80d136f0262e" }
 wasmi = { version = "2", default-features = false, features = ["std", "validate", "auto-dispatch", "deterministic"] }
 
 [lints.rust]
